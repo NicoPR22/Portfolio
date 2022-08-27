@@ -1,0 +1,15 @@
+.text {
+    font-size: .8rem;
+    margin: 0.5rem 1rem;
+}
+
+.author {
+    font-size: .6rem;
+    text-align: right;
+    margin: 0.5rem 2rem;
+}
+
+.new-tbn {
+    font-size: .5rem;
+    padding: 0.3rem 0.5rem;
+}

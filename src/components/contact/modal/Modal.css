@@ -1,0 +1,13 @@
+.modal__container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-primary-variant);
+    color: var( --color-white);
+    width: fit-content;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.7rem;
+   
+    font-size: .8rem;
+   
+}
