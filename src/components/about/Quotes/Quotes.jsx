@@ -9,8 +9,16 @@ const  quotes =[{
     author: "Iron Maiden"
 },
 {
-    text: "",
-    author: ""
+    text: "free exercise in the open air...The health,attainable by other means than this is scarcely worth the name",
+    author: "The Landscape Garder - E A Poe"
+},
+{
+  text: "There are no impossible obstacles; there are just stronger and weaker wills, that’s all!",
+  author: "The Adventures of Captain Hatteras - Jules Verne"
+},
+{
+  text: "Our virtues and our failings are inseparable, like force and mat",
+  author: "Nikola Tesla"
 }]
 
 const Quotes = () => {

@@ -1,9 +1,7 @@
 import React from "react";
 import "./About.css";
 import ME from "../../assets/IMG_20211220_190800_074.jpg";
-import { FaAward } from "react-icons/fa";
 import { RiDoubleQuotesL } from "react-icons/ri";
-import { FiUsers } from "react-icons/fi";
 import Quotes from "./Quotes/Quotes";
 import Player from "./player/Player";
 
@@ -25,11 +23,13 @@ const About = () => {
               <h5>Where I Found Motivation</h5>
               <Quotes/>
             </article>
+            {/*
             <article className="about__card">
               <FiUsers className="about__icon" />
               <h5>Clients</h5>
               <Player/>
             </article>
+             */}
           </div>
           <p>
             {" "}

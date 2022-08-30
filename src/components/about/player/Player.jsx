@@ -37,13 +37,15 @@ const songsdata = [
 const Player = () => {
   const [songs, setSongs] = useState(songsdata);
   const [isplaying, setisplaying] = useState(false);
-  const [currentSong, setCurrentSong] = useState(songsdata[0]);
+  const [currentSong, setCurrentSong] = useState(
+    { title: songsdata[0].title,
+      author: songsdata[0].author,
+      index: songsdata[0].index,
+      progress: 0,
+      length: 0
+    });
 
   const audioElem = useRef();
-
-  const clickRef = useRef();
-
-
 
   useEffect(() => {
     if (isplaying) {
@@ -56,30 +58,24 @@ const Player = () => {
   const onPlaying = () => {
     const duration = audioElem.current.duration;
     const ct = audioElem.current.currentTime;
+    console.log(duration)
+    console.log(ct)
+
 
     setCurrentSong({
       ...currentSong,
       progress: (ct / duration) * 100,
-      length: duration,
+      length: duration * 1/60,
     });
   };
 
   const PlayPause = () => {
-    console.log(Object.keys(audioElem));
     setisplaying(!isplaying);
     if (isplaying) {
       audioElem.current.play();
     } else {
       audioElem.current.pause();
     }
-  };
-
-  const checkWidth = (e) => {
-    let width = clickRef.current.clientWidth;
-    const offset = e.nativeEvent.offsetX;
-
-    const divprogress = (offset / width) * 100;
-    audioElem.current.currentTime = (divprogress / 100) * currentSong.length;
   };
 
   const skipBack = () => {
@@ -120,23 +116,21 @@ const Player = () => {
             showIndicators={false}
             centerMode={true}
           >
-            
-              <p className="player__artist">{currentSong.author}</p>
-      
-            
-              <p className="player__song">{currentSong.title}</p>
-            
+            <p className="player__artist">{currentSong.author}</p>
+            <p className="player__song">{currentSong.title}</p>
           </Carousel>
         </div>
+        {/*
         <input
           type="range"
           value={currentSong.progress}
           className="player__level"
         />
         <div className="audio__duration">
-          <div className="start">{currentSong.progress}</div>
-          <div className="end">{currentSong.length}</div>
+          <div className="start">{ currentSong.progress }</div>
+          <div className="end">{ currentSong.length }</div>
         </div>
+        */}
         <audio
           src={currentSong.index}
           ref={audioElem}
