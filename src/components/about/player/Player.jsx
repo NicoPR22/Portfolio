@@ -4,10 +4,6 @@ import { BsPause } from "react-icons/bs";
 import { BsSkipBackward } from "react-icons/bs";
 import { BsSkipForward } from "react-icons/bs";
 import "./Player.css";
-import S1 from "../../../assets/american woman - the guess who.mp3";
-import S2 from "../../../assets/Arctic Monkeys - Do I Wanna Know.mp3";
-import S3 from "../../../assets/beastie boys - sabotage.mp3";
-import S4 from "../../../assets/behind the sun.mp3";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 

@@ -3,7 +3,7 @@ import "./About.css";
 import ME from "../../assets/IMG_20211220_190800_074.jpg";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import Quotes from "./Quotes/Quotes";
-import Player from "./player/Player";
+
 
 const About = () => {
   return (
@@ -20,7 +20,7 @@ const About = () => {
           <div className="about__cards">
             <article className="about__card">
               <RiDoubleQuotesL className="about__icon" />
-              <h5>Where I Found Motivation</h5>
+              <h5>Where I Get Motivation</h5>
               <Quotes/>
             </article>
             {/*
