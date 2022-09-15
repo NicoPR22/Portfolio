@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import ME from "../../assets/IMG_20211220_190800_074.jpg";
+import ME from "../../assets/About.png";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import Quotes from "./Quotes/Quotes";
 
